@@ -1,0 +1,16 @@
+[
+  {
+    "path": "/home/index",
+    "name": "home",
+    "component": "/home/index",
+    "meta": {
+      "title": "首页",
+      "icon": "home",
+      "isLink": "",
+      "isHide": false,
+      "isFull": false,
+      "isAffix": true,
+      "isKeepAlive": true
+    }
+  }
+]

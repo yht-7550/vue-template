@@ -23,6 +23,7 @@ export default antfu({
       'no-console': 'warn',
       'vue/quote-props': ['error', 'always'],
       'ts/no-use-before-define': 'off',
+      'node/prefer-global/process': 'off',
     },
   },
 
@@ -48,14 +49,13 @@ export default antfu({
           max: 1,
         },
       }],
-      'node/prefer-global/process': 'off',
       'unused-imports/no-unused-vars': 'warn',
       'vue/html-self-closing': 'off',
     },
   },
 
   // Disable jsonc and yaml support
-  jsonc: false,
+  jsonc: true,
   yaml: false,
   ignores: ['**/node_modules/**', '**/dist/**', 'README.md'],
 })

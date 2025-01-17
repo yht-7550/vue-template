@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "outDir": "dist",
     "target": "ESNext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "useDefineForClassFields": true,
+    "baseUrl": ".",
     "module": "esnext",
     "moduleResolution": "node",
     "paths": {
@@ -12,26 +14,28 @@
         "src/*"
       ]
     },
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "sourceMap": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true,
     "types": [
+      "element-plus/global",
       "node",
+      "vite/client"
     ],
-    "skipLibCheck": true,
+    "allowJs": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "skipDefaultLibCheck": true,
-    "allowSyntheticDefaultImports": true
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
     "./auto-imports.d.ts",
-    "./components.d.ts",
+    "./components.d.ts"
   ]
 }
