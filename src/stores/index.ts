@@ -1,7 +1,3 @@
-import { createPinia } from 'pinia'
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
-
+export * from './modules/auth'
 export * from './modules/global'
-
-const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
+export * from './modules/user'

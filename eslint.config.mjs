@@ -51,6 +51,7 @@ export default antfu({
       }],
       'unused-imports/no-unused-vars': 'warn',
       'vue/html-self-closing': 'off',
+      'vue/component-name-in-template-casing': 'off',
     },
   },
 

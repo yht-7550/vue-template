@@ -2,10 +2,12 @@
 
 <template>
   <div class="w-screen h-screen">
-    <el-container>
-      <el-header>Header</el-header>
+    <el-container class="contain-layout">
+      <el-header class="bg-gray-200">
+        Header
+      </el-header>
       <el-container>
-        <el-aside width="200px">
+        <el-aside width="200px" class="bg-gray-400">
           Aside
         </el-aside>
         <el-main>
@@ -16,4 +18,9 @@
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contain-layout {
+  width: 100%;
+  height: 100%;
+}
+</style>

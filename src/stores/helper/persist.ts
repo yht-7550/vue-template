@@ -1,4 +1,5 @@
 import type { PersistenceOptions } from 'pinia-plugin-persistedstate'
+// import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 /**
  * @description pinia 持久化参数配置
@@ -10,6 +11,7 @@ export const piniaPersistConfig = (key: string, options?: PersistenceOptions) =>
   const persist: PersistenceOptions = {
     key,
     storage: localStorage,
+    // storage: piniaPluginPersistedstate.localStorage(),
     ...options,
   }
   return persist
