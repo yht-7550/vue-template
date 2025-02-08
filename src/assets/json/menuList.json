@@ -12,5 +12,107 @@
       "isAffix": true,
       "isKeepAlive": true
     }
+  },
+  {
+    "path": "/home/login",
+    "name": "login",
+    "component": "/login/login",
+    "meta": {
+      "title": "登录",
+      "icon": "login",
+      "isLink": "",
+      "isHide": false,
+      "isFull": true,
+      "isAffix": true,
+      "isKeepAlive": true
+    }
+  },
+  {
+    "path": "/baseInfo",
+    "name": "baseInfo",
+    "redirect": "/baseInfo/customer",
+    "meta": {
+      "title": "基础",
+      "icon": "baseInfo",
+      "isLink": "",
+      "isHide": false,
+      "isFull": true,
+      "isAffix": true,
+      "isKeepAlive": true
+    },
+    "children": [
+      {
+        "path": "/baseInfo/customer",
+        "name": "customer",
+        "component": "/baseInfo/customer/index",
+        "meta": {
+          "title": "客户管理",
+          "icon": "customer",
+          "isLink": "",
+          "isHide": false,
+          "isFull": false,
+          "isAffix": true,
+          "isKeepAlive": true
+        }
+      },
+      {
+        "path": "/baseInfo/supplier",
+        "name": "supplier",
+        "component": "/baseInfo/supplier/index",
+        "meta": {
+          "title": "供应商管理",
+          "icon": "supplier",
+          "isLink": "",
+          "isHide": false,
+          "isFull": false,
+          "isAffix": true,
+          "isKeepAlive": true
+        }
+      }
+    ]
+  },
+  {
+    "path": "/systemInfo",
+    "name": "systemInfo",
+    "redirect": "/systemInfo/user",
+    "meta": {
+      "title": "系统",
+      "icon": "systemInfo",
+      "isLink": "",
+      "isHide": false,
+      "isFull": true,
+      "isAffix": true,
+      "isKeepAlive": true
+    },
+    "children": [
+      {
+        "path": "/systemInfo/user",
+        "name": "user",
+        "component": "/systemInfo/user/index",
+        "meta": {
+          "title": "用户管理",
+          "icon": "user",
+          "isLink": "",
+          "isHide": false,
+          "isFull": false,
+          "isAffix": true,
+          "isKeepAlive": true
+        }
+      },
+      {
+        "path": "/systemInfo/role",
+        "name": "role",
+        "component": "/systemInfo/role/index",
+        "meta": {
+          "title": "角色管理",
+          "icon": "role",
+          "isLink": "",
+          "isHide": false,
+          "isFull": false,
+          "isAffix": true,
+          "isKeepAlive": true
+        }
+      }
+    ]
   }
 ]

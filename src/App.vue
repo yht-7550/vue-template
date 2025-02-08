@@ -13,4 +13,4 @@ const local = computed(() => (globalState.value.language === 'zhCn' ? zhCn : en)
   </ElConfigProvider>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
