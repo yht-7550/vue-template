@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useUserStore } from '@/stores'
-import { ElForm } from 'element-plus'
 import JSEncrypt from 'jsencrypt'
 
 const form = ref({

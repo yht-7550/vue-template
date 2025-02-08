@@ -23,6 +23,7 @@ export default antfu({
       'no-console': 'warn',
       'vue/quote-props': ['error', 'always'],
       'ts/no-use-before-define': 'off',
+      'ts/no-namespace': 'off',
       'node/prefer-global/process': 'off',
     },
   },

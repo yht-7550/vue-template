@@ -1,4 +1,5 @@
 import type { PluginOption } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -13,9 +14,9 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export const createVitePlugins = (): (PluginOption | PluginOption[])[] => {
   return [
     vue(),
-    // vue 可以使用 jsx/tsx 语法
     vueJsx(),
     vueDevTools(),
+    tailwindcss(),
     Inspect({
       outputDir: '.vite-inspect',
     }),

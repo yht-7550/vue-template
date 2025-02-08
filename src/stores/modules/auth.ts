@@ -6,7 +6,10 @@ export const useAuthStore = defineStore('auth', () => {
   const menuList = ref<Menu.MenuOptions[]>([])
   /** 扁平化后的页面权限列表 */
   const flattenMenuList = computed(() => getFlattenMenus())
+  /** 保持页面缓存的列表 */
+  const keepAliveNames = ref<string[]>([])
 
+  /** 处理嵌套路由 */
   const getFlattenMenus = () => {
     const flattenMenus: Menu.MenuOptions[] = []
     const loop = (menuList: Menu.MenuOptions[]) => {
@@ -23,7 +26,22 @@ export const useAuthStore = defineStore('auth', () => {
     return flattenMenus
   }
 
-  return { menuList, flattenMenuList }
+  /** 设置页面缓存 */
+  const addKeepAliveName = (name: string) => !keepAliveNames.value.includes(name) && keepAliveNames.value.push(name)
+  /** 移除页面缓存 */
+  const removeKeepAliveName = (name: string) => keepAliveNames.value = keepAliveNames.value.filter(item => item !== name)
+  /** 重置页面缓存 */
+  const setKeepAliveName = (keepAliveName: string[] = []) => {
+    keepAliveNames.value = keepAliveName
+  }
+  return {
+    menuList,
+    flattenMenuList,
+    keepAliveNames,
+    addKeepAliveName,
+    removeKeepAliveName,
+    setKeepAliveName,
+  }
 }, {
   persist: piniaPersistConfig(`${piniaPersistPrefix}-auth`),
 })

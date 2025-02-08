@@ -27,8 +27,8 @@ pnpm build
 pnpm lint
 ```
 
-### Unocss字体图标库 🎨
+### Tailwindcss字体图标库 🎨
 * 字体图标库 **[@iconify-json/material-symbols](https://icon-sets.iconify.design/material-symbols)**
 ```
-<div class="i-material-symbols:settings w-24px h-24px"></div>
+<span class="icon-[material-symbols--filter-drama] w-8 h-8 text-[#409EFF]"></span>
 ```

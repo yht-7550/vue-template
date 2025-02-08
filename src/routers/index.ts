@@ -1,7 +1,8 @@
-import { HOME_URL, LOGIN_URL } from '@/config'
+import { LOGIN_URL } from '@/config'
 import { useAuthStore, useUserStore } from '@/stores'
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import { initDynamicRouter } from './modules/dynamicRouter'
+import { errorRouter, staticRouter } from './modules/staticRouter'
 
 const mode = import.meta.env.VITE_ROUTER_MODE
 
@@ -12,32 +13,9 @@ const routerMode = {
 
 const router = createRouter({
   history: routerMode[mode](),
-  routes: [
-    {
-      path: '/',
-      redirect: HOME_URL,
-    },
-    {
-      path: LOGIN_URL,
-      name: 'login',
-      component: () => import('@/views/login/login.vue'),
-      meta: {
-        title: '登录',
-      },
-    },
-    {
-      path: '/home/index',
-      name: 'home',
-      component: () => import('@/views/home/index.vue'),
-    },
-    {
-      path: '/layout',
-      name: 'layout',
-      component: () => import('@/layout/default.vue'),
-      redirect: HOME_URL,
-      children: [],
-    },
-  ],
+  routes: [...staticRouter, ...errorRouter],
+  strict: false,
+  scrollBehavior: () => ({ left: 0, top: 0 }),
 })
 
 router.beforeEach(async (to, from, next) => {
@@ -57,10 +35,7 @@ router.beforeEach(async (to, from, next) => {
   // if (ROUTER_WHITE_LIST.includes(to.path)) return next();
 
   // 判断是否有 Token，没有重定向到 login 页面
-  console.log('token =>', token.value)
-
   if (!token.value) {
-    console.log(13)
     return next({ path: LOGIN_URL, replace: true })
   }
 
