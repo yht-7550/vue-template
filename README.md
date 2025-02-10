@@ -27,6 +27,12 @@ pnpm build
 pnpm lint
 ```
 
+### 代码提交
+
+```
+pnpm commit
+```
+
 ### Tailwindcss字体图标库 🎨
 * 字体图标库 **[@iconify-json/material-symbols](https://icon-sets.iconify.design/material-symbols)**
 ```

@@ -12,7 +12,8 @@
     "lint:lint-staged": "lint-staged",
     "prepare": "husky",
     "commit": "czg",
-    "czg": "cross-env NODE_OPTIONS='--experimental-transform-types --disable-warning=ExperimentalWarning' czg"
+    "czg": "cross-env NODE_OPTIONS='--experimental-transform-types --disable-warning=ExperimentalWarning' czg",
+    "release": "release-it"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
@@ -42,6 +43,8 @@
     "eslint-plugin-format": "^1.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
+    "release-it": "^18.1.2",
+    "release-it-pnpm": "^4.6.4",
     "sass-embedded": "^1.83.4",
     "typescript": "^5.7.3",
     "unplugin-auto-import": "^19.0.0",
