@@ -34,7 +34,6 @@
     "@commitlint/config-conventional": "^19.7.1",
     "@iconify-json/material-symbols": "^1.2.12",
     "@iconify/tailwind4": "^1.0.3",
-    "@release-it/conventional-changelog": "^10.0.0",
     "@types/node": "^22.10.5",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitejs/plugin-vue-jsx": "^4.1.1",
