@@ -31,6 +31,7 @@ pnpm lint
 
 ```
 pnpm commit
+git push
 ```
 
 ### Tailwindcss字体图标库 🎨
