@@ -12,8 +12,8 @@ export const useAuthStore = defineStore('auth', () => {
   /** 处理嵌套路由 */
   const getFlattenMenus = () => {
     const flattenMenus: Menu.MenuOptions[] = []
-    const loop = (menuList: Menu.MenuOptions[]) => {
-      menuList.forEach((item) => {
+    const loop = (_menuList: Menu.MenuOptions[]) => {
+      _menuList.forEach((item) => {
         if (item.children) {
           loop(item.children)
         }
