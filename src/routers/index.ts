@@ -1,6 +1,6 @@
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import { LOGIN_URL } from '@/config'
 import { useAuthStore, useUserStore } from '@/stores'
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import { initDynamicRouter } from './modules/dynamicRouter'
 import { errorRouter, staticRouter } from './modules/staticRouter'
 

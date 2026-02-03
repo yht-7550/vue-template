@@ -25,6 +25,8 @@ export default antfu({
       'ts/no-use-before-define': 'off',
       'ts/no-namespace': 'off',
       'node/prefer-global/process': 'off',
+      'no-unused-vars': 'warn',
+      'unused-imports/no-unused-vars': 'warn',
     },
   },
 
@@ -34,6 +36,10 @@ export default antfu({
       'ts/explicit-function-return-type': 'off',
       'style/semi': ['error', {
         beforeStatementContinuationChars: 'never',
+      }],
+      'regexp/no-unused-capturing-group': ['error', {
+        fixable: true,
+        allowNamed: false,
       }],
     },
   },
@@ -50,7 +56,6 @@ export default antfu({
           max: 1,
         },
       }],
-      'unused-imports/no-unused-vars': 'warn',
       'vue/html-self-closing': 'off',
       'vue/component-name-in-template-casing': 'off',
     },
